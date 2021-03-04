@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finding The Way Developer - Articles</title>
+    <description>나의 코딩 이야기</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>[종만북]28.그래프의 깊이 우선 탐색-단어 제한 끝말잇기</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Fri, 19 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/WORDCHAIN</link>
+        <guid isPermaLink="true">http://localhost:4000/WORDCHAIN</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]28.그래프의 깊이 우선 탐색-고대어 사전</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Fri, 19 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/DICTIONARY</link>
+        <guid isPermaLink="true">http://localhost:4000/DICTIONARY</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]24.구간 트리-삽입 정렬 시간 재기</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Thu, 18 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/MEASURETIME</link>
+        <guid isPermaLink="true">http://localhost:4000/MEASURETIME</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]25.상호 베타적 집합-에디터 전쟁</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Thu, 18 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/EDITORWARS</link>
+        <guid isPermaLink="true">http://localhost:4000/EDITORWARS</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]23.우선순위 큐와 힙-변화하는 중간값</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Wed, 17 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/RUNNINGMEDIAN</link>
+        <guid isPermaLink="true">http://localhost:4000/RUNNINGMEDIAN</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]22.이진 검색 트리-너드인가, 너드가 아닌가?</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Wed, 17 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/NERD2</link>
+        <guid isPermaLink="true">http://localhost:4000/NERD2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]24.구간 트리-등산로</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Wed, 17 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/MORDOR</link>
+        <guid isPermaLink="true">http://localhost:4000/MORDOR</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]21.트리의 구현과 순회-요새</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Tue, 16 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/FORTRESS</link>
+        <guid isPermaLink="true">http://localhost:4000/FORTRESS</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]21.트리의 구현과 순회-문자열 합치기</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Mon, 15 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/TRAVERSAL</link>
+        <guid isPermaLink="true">http://localhost:4000/TRAVERSAL</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]10.탐욕법-문자열 합치기</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Tue, 09 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/STRJOIN</link>
+        <guid isPermaLink="true">http://localhost:4000/STRJOIN</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]10.탐욕법-도시락 데우기</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Sun, 07 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/LUNCHBOX</link>
+        <guid isPermaLink="true">http://localhost:4000/LUNCHBOX</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]9.동적 계획법 테크닉-드래곤 커브</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/DRAGON</link>
+        <guid isPermaLink="true">http://localhost:4000/DRAGON</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]9.동적 계획법 테크닉-K번째 증가 수열</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Thu, 04 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/KLIS</link>
+        <guid isPermaLink="true">http://localhost:4000/KLIS</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]9.동적 계획법 테크닉-모스 부호 사전</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Feb 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/MORSE</link>
+        <guid isPermaLink="true">http://localhost:4000/MORSE</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]9.동적 계획법 테크닉-광학 문자 인식</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Sun, 31 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/OCR</link>
+        <guid isPermaLink="true">http://localhost:4000/OCR</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]9.동적 계획법 테크닉-여행 짐 싸기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Fri, 29 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/PACKING</link>
+        <guid isPermaLink="true">http://localhost:4000/PACKING</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>알고리즘 8장-폴리오미노</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Wed, 27 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/POLY</link>
+        <guid isPermaLink="true">http://localhost:4000/POLY</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 게획법-두니발 박사의 탈옥</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Wed, 27 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/NUMB3RS</link>
+        <guid isPermaLink="true">http://localhost:4000/NUMB3RS</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-비대칭 타일링</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/ASYMTILING</link>
+        <guid isPermaLink="true">http://localhost:4000/ASYMTILING</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-Quantization</title>
+        
+          <description>&lt;h4 id=&quot;문제&quot;&gt;문제&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Sun, 24 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/QUANTIZE</link>
+        <guid isPermaLink="true">http://localhost:4000/QUANTIZE</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-원주율 외우기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sat, 23 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/PI</link>
+        <guid isPermaLink="true">http://localhost:4000/PI</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-합친 LIS</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 19 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/JLIS</link>
+        <guid isPermaLink="true">http://localhost:4000/JLIS</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-와일드카드</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 18 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/WILDCARD</link>
+        <guid isPermaLink="true">http://localhost:4000/WILDCARD</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]8.동적 계획법-외발 뛰기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sun, 17 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/JUMPGAME</link>
+        <guid isPermaLink="true">http://localhost:4000/JUMPGAME</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]7.분할 정복-울타리 잘라내기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/FENCE</link>
+        <guid isPermaLink="true">http://localhost:4000/FENCE</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]7.분할 정복-쿼드 트리 뒤집기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Fri, 08 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/QUADTREE</link>
+        <guid isPermaLink="true">http://localhost:4000/QUADTREE</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]6.무식하게 풀기-시계 맞추기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Thu, 07 Jan 2021 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/CLOCKSYNC</link>
+        <guid isPermaLink="true">http://localhost:4000/CLOCKSYNC</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>졸업 작품_Easy Tag-2(Mapbox Android Map)</title>
+        
+          <description>&lt;h5 id=&quot;mapbox-android-map&quot;&gt;Mapbox Android Map&lt;/h5&gt;
+
+</description>
+        
+        <pubDate>Thu, 11 Jun 2020 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/graduproj2</link>
+        <guid isPermaLink="true">http://localhost:4000/graduproj2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>졸업 작품_Easy Tag-1(API)</title>
+        
+          <description>&lt;h4 id=&quot;서론&quot;&gt;서론&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Wed, 10 Jun 2020 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/graduproj1</link>
+        <guid isPermaLink="true">http://localhost:4000/graduproj1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>공학연구인턴십_ShelterFinder-2</title>
+        
+          <description>&lt;p&gt;다음으로, 구축된 지도와 대피소 데이터, 도로 데이터를 기반으로 최단 경로 알고리즘을 구현하여야 한다. 먼저, 사용자의 위치를 지도 위에 표현하여야 한다. 이는 마커를 통해 사용자가 지도 위의 지점을 클릭했을 때 해당 지점으로 마커를 이동하여 사용자의 현재 위치 지점으로 설정한다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 09 Jun 2020 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/studyproj2</link>
+        <guid isPermaLink="true">http://localhost:4000/studyproj2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>공학연구인턴십_ShelterFinder-1</title>
+        
+          <description>&lt;h4 id=&quot;서론&quot;&gt;서론&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Mon, 08 Jun 2020 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/studyproj</link>
+        <guid isPermaLink="true">http://localhost:4000/studyproj</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]6.무식하게 풀기-소풍</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 05 Nov 2019 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/picnic</link>
+        <guid isPermaLink="true">http://localhost:4000/picnic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>[종만북]6.무식하게 풀기-게임판 덮기</title>
+        
+          <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 05 Nov 2019 04:25:52 +0900</pubDate>
+        <link>
+        http://localhost:4000/boardcover</link>
+        <guid isPermaLink="true">http://localhost:4000/boardcover</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Full and Comprehensive Style Test</title>
+        
+          <description>&lt;p&gt;This is just an &lt;em&gt;ipsis verbis&lt;/em&gt; copy of the first example running on the &lt;a href=&quot;http://demo.ghost.io&quot;&gt;Ghost Demo&lt;/a&gt;. This shows how you can use html styling to achieve your hopes.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 27 Sep 2014 19:18:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/a-full-and-comprehensive-style-test</link>
+        <guid isPermaLink="true">http://localhost:4000/a-full-and-comprehensive-style-test</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

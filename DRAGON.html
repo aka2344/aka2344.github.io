@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>[종만북]9.동적 계획법 테크닉-드래곤 커브</title>
+    <meta name="description" content="나의 코딩 이야기" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="http://localhost:4000//DRAGON" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="Finding The Way Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[종만북]9.동적 계획법 테크닉-드래곤 커브" />
+    <meta property="og:description" content="나의 코딩 이야기" />
+    <meta property="og:url" content="http://localhost:4000//DRAGON" />
+    <meta property="og:image" content="/assets/images/cover1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[종만북]9.동적 계획법 테크닉-드래곤 커브" />
+    <meta name="twitter:description" content="나의 코딩 이야기" />
+    <meta name="twitter:url" content="http://localhost:4000//DRAGON" />
+    <meta name="twitter:image:src" content="/assets/images/cover1.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "Finding The Way Developer",
+    "name": "[종만북]9.동적 계획법 테크닉-드래곤 커브",
+    "url": "http://localhost:4000//DRAGON",
+    "image": "/assets/images/cover1.jpg",
+    "description": "나의 코딩 이야기"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="Finding The Way Developer" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-fables " role="presentation"><a href="/tag/projects">Projects</a></li>
+        <li class="nav-speeches " role="presentation"><a href="/tag/algorithm">Algorithm</a></li>
+        <li class="nav-fiction " role="presentation"><a href="/tag/etc">ETC</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="/"><img src="/assets/images/ghost.png" alt="Blog Logo" /></a>
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-windows">
+
+        <header class="post-header">
+            <h2 class="post-title">[종만북]9.동적 계획법 테크닉-드래곤 커브</h2>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/aka2344'>Donghoon Kang</a>
+                
+            
+            <time class="post-date" datetime="2021-02-05">05 Feb 2021</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/algorithm'>Algorithm</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <h4 id="문제">문제</h4>
+
+<p>출처 : https://www.algospot.com/judge/problem/read/DRAGON</p>
+
+<p>드래곤 커브(Dragon curve)는 간단한 수학 규칙으로 그릴 수 있는 그림으로, 위 그림같은 형태를 지닙니다. 드래곤 커브는 선분 하나에서 시작해서 간단한 규칙으로 이 선분을 변형해서 만들어지며, 변형이 한 번 이루어져 세대가 변할 때마다 더욱 복잡한 모양으로 진화합니다. 이 도형같이 일부를 확대했을 때 전체와 비슷한 형태로 구성된 도형들을 프랙탈(fractal) 이라고 하지요.</p>
+
+<p>드래곤 커브를 그리는 방법을 드래곤 커브 문자열이라고 부릅시다. 드래곤 커브 문자열은 X, Y, F, +, -로 구성된 문자열인데, 우리는 한 점에서 시작해 다음과 같이 커브를 그리면 됩니다.</p>
+
+<ul>
+  <li>F: 앞으로 한 칸 전진하며 선을 긋습니다.</li>
+  <li>+: 왼쪽으로 90도 회전합니다.</li>
+  <li>-: 오른쪽으로 90도 회전합니다.</li>
+  <li>X, Y: 무시합니다.</li>
+</ul>
+
+<p>0세대 드래곤 커브를 그리는 문자열은 선분 하나인 FX 입니다. 그리고 그 이후의 다음 세대는 이전 세대 문자열의 각 글자를 다음과 같이 치환해서 만들어집니다.</p>
+
+<ul>
+  <li>X =&gt; X+YF</li>
+  <li>Y =&gt; FX-Y</li>
+</ul>
+
+<p>따라서 1, 2세대 드래곤 커브 문자열은 다음과 같습니다.</p>
+
+<ul>
+  <li>1세대: FX+YF</li>
+  <li>2세대: FX+YF+FX-YF</li>
+</ul>
+
+<p>n세대 드래곤 커브 문자열을 구하고 싶습니다. 이 때 문자열 전체를 구하면 너무 기니, 문자열 중 p번째 글자부터 l글자만을 계산하는 프로그램을 작성하세요.</p>
+
+<h4 id="입력">입력</h4>
+
+<p>입력의 첫 줄에는 테스트 케이스의 수 c (c &lt;=50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 세 개의 정수로 드래곤 커브의 세대 n (0 &lt;= n &lt;= 50) , 그리고 p 와 l (1 &lt;= p &lt;= 1,000,000,000 , 1 &lt;= l &lt;= 50) 이 주어집니다. n세대의 드래곤 커브 문자열의 길이는 항상 p+l 이상이라고 가정해도 좋습니다.</p>
+
+<h4 id="출력">출력</h4>
+
+<p>각 테스트케이스마다 한 줄에 n세대 드래곤 커브 문자열의 p번째 글자부터 l글자를 출력합니다.</p>
+
+<h3 id="풀이책-참고">풀이(책 참고)</h3>
+
+<p>먼저 단순히 특정 문자열을 n세대만큼 진화시키는 메서드를 생각한다. 이는 다음과 같다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// seed 문자열을 generations세대만큼 진화시켰을 때 결과 문자열</span>
+<span class="kd">static</span> <span class="kt">void</span> <span class="nf">curve</span><span class="o">(</span><span class="n">String</span> <span class="n">seed</span><span class="o">,</span> <span class="kt">int</span> <span class="n">generations</span><span class="o">){</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">generations</span> <span class="o">==</span><span class="mi">0</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"seed"</span><span class="o">);</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">seed</span><span class="o">.</span><span class="na">length</span><span class="o">();</span><span class="n">i</span><span class="o">++){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">seed</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)==</span><span class="sc">'X'</span><span class="o">)</span>
+            <span class="n">curve</span><span class="o">(</span><span class="s">"X+YF"</span><span class="o">,</span><span class="n">generations</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">seed</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)==</span><span class="sc">'Y'</span><span class="o">)</span>
+            <span class="n">curve</span><span class="o">(</span><span class="s">"FX-Y"</span><span class="o">,</span><span class="n">generations</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="k">else</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">seed</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>진화 시킬 세대수를 매개변수로 받는데, 문자열을 검사하여 X 또는 Y를 만났을 경우 각 문자가 치환되는 문자에 대해 현재 세대수에서 1만큼 뺀 세대를 진화하도록 재귀호출하여 결과를 찾도록 한다. 여기서 특정 문자열을 진화시킨 후 특정 인덱스의 문자를 찾는다면, 건너뛸 문자의 개수가 skip일 때 재귀함수에서 출력할 문자열의 길이를 비교하여 skip보다 작은 경우 skip에서 해당값을 빼고 진행하고, 큰 경우 skip번째 문자열을 출력하도록 하면 된다.</p>
+
+<p>이 때 0보다 큰 현재 세대에서 문자열을 검사할 때, 해당 문자가 X 또는 Y인 경우 세대를 걸쳐 진화함에 따라 글자의 길이가 증가한다. 이 때, X 또는 Y가 진화가 완료됬을 때 글자수를 안다면 해당 길이를 skip값과 비교하여 건너뛸 수 있다. 점화식에 따라, X 또는 Y는 n세대 진화한 값을 L(n)이라 할 때, L(n) = 2*L(n-1)+2가 성립함을 알 수 있다. 따라서, 이러한 성질을 통해 진화한 세대수에 따른 길이를 배열에 저장하고, 건너뛰는 단계에서 이를 활용하여 효과적으로 skip값을 줄일 수 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kt">void</span> <span class="nf">precalc</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">length</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+            <span class="c1">// 오버 플로 방지</span>
+			<span class="n">length</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">MAX</span><span class="o">,</span> <span class="n">length</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">);</span>
+	<span class="o">}</span>
+
+<span class="c1">// cv 문자열을 generations 세대만큼 진화 시킨 후 skip번째 문자</span>
+	<span class="kd">static</span> <span class="kt">char</span> <span class="nf">curve</span><span class="o">(</span><span class="n">String</span> <span class="n">cv</span><span class="o">,</span> <span class="kt">int</span> <span class="n">generations</span><span class="o">,</span> <span class="kt">int</span> <span class="n">skip</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">generations</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">skip</span><span class="o">&lt;</span><span class="n">cv</span><span class="o">.</span><span class="na">length</span><span class="o">())</span>
+				<span class="k">return</span> <span class="n">cv</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">skip</span><span class="o">);</span>
+			<span class="k">else</span>
+				<span class="k">return</span> <span class="sc">' '</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">cv</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">char</span> <span class="n">a</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="sc">'X'</span> <span class="o">||</span> <span class="n">a</span> <span class="o">==</span> <span class="sc">'Y'</span><span class="o">)</span> <span class="o">{</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">skip</span> <span class="o">&gt;=</span> <span class="n">length</span><span class="o">[</span><span class="n">generations</span><span class="o">])</span>
+					<span class="n">skip</span> <span class="o">-=</span> <span class="n">length</span><span class="o">[</span><span class="n">generations</span><span class="o">];</span>
+				<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="sc">'X'</span><span class="o">)</span>
+					<span class="k">return</span> <span class="nf">curve</span><span class="o">(</span><span class="s">"X+YF"</span><span class="o">,</span> <span class="n">generations</span> <span class="o">-</span> <span class="mi">1</span><span class="o">,</span> <span class="n">skip</span><span class="o">);</span>
+				<span class="k">else</span>
+					<span class="k">return</span> <span class="nf">curve</span><span class="o">(</span><span class="s">"FX-Y"</span><span class="o">,</span> <span class="n">generations</span> <span class="o">-</span> <span class="mi">1</span><span class="o">,</span> <span class="n">skip</span><span class="o">);</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">skip</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">skip</span><span class="o">--;</span>
+			<span class="k">else</span>
+				<span class="k">return</span> <span class="n">a</span><span class="o">;</span>
+
+		<span class="o">}</span>
+        <span class="c1">//미실행</span>
+		<span class="k">return</span> <span class="sc">'#'</span><span class="o">;</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>먼저 length배열에 X또는 Y가 진화한 세대수에 따른 길이를 저장한다. 이후 문자열 cv를 generations세대만큼 진화하였을 때 skip번째 문자를 출력하는 함수 curve를 정의하는데, 기저 사례로 세대수가 0인 경우 skip값과 cv의 길이를 비교하여 skip보다 cv의 길이가 작은 경우 skip번째 문자를 출력하도록 한다.</p>
+
+<p>이후, cv의 각 문자를 순회하여 X 또는 Y와 만났을 때 현재 진화시켜야할 세대수만큼 진화하였을 때 길이가 skip보다 작거나 같은경우는 해당 문자를 건너뛸 수 있음을 의미하므로 skip값에서 해당값을 빼도록 하고, skip보다 큰경우 X또는 Y에 대응하는 문자열을 generations-1 세대만큼 진화하였을 때 skip번째 문자를 출력하도록 한다.</p>
+
+<p>이외의 경우(F,+,-) skip이 0보다 클 때 각 문자를 건너뛰므로 skip값에 1을 빼고, skip이 0일때는 해당 문자를 출력하도록 한다.</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/aka2344" style="background-image: url(/assets/images/casper.png)"><span class="hidden">aka2344's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/aka2344">Donghoon Kang</a></h4>
+
+                        
+                            <p> 백엔드 개발자를 꿈꾸는 개발장비니다.</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Seoul, Korea</span>
+                            <span class="author-link icon-link"><a href="http://aka2344.github.io/"> aka2344.github.io</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=[종만북]9.동적 계획법 테크닉-드래곤 커브&amp;url=http://localhost:4000DRAGON"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000DRAGON"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                        <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:4000DRAGON"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="hidden">Google+</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'aka2344'; // required: replace example with your forum shortname
+        var disqus_identifier = '/DRAGON';
+        var disqus_url = 'http://localhost:4000/DRAGON';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story no-cover" href="/LUNCHBOX">
+            <section class="post">
+                <h2>[종만북]10.탐욕법-도시락 데우기</h2>
+                <p>#### 문제 출처 : https://www.algospot.com/judge/problem/read/LUNCHBOX After suffering from the deficit in summer camp, Ainu7 decided...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev no-cover" href="/KLIS">
+            <section class="post">
+                <h2>[종만북]9.동적 계획법 테크닉-K번째 증가 수열</h2>
+                <p>문제 출처 : https://www.algospot.com/judge/problem/read/KILS 어떤 정수 수열에서 0개 이상의 숫자를 지우면 이 수열의 부분 수열...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <section class="copyright"><a href="/">Finding The Way Developer</a> &copy; 2021</section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-69281367-1', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

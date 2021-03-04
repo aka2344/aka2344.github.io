@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>[종만북]9.동적 계획법 테크닉-K번째 증가 수열</title>
+    <meta name="description" content="나의 코딩 이야기" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="http://localhost:4000//KLIS" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="Finding The Way Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[종만북]9.동적 계획법 테크닉-K번째 증가 수열" />
+    <meta property="og:description" content="나의 코딩 이야기" />
+    <meta property="og:url" content="http://localhost:4000//KLIS" />
+    <meta property="og:image" content="/assets/images/cover1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[종만북]9.동적 계획법 테크닉-K번째 증가 수열" />
+    <meta name="twitter:description" content="나의 코딩 이야기" />
+    <meta name="twitter:url" content="http://localhost:4000//KLIS" />
+    <meta name="twitter:image:src" content="/assets/images/cover1.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "Finding The Way Developer",
+    "name": "[종만북]9.동적 계획법 테크닉-K번째 증가 수열",
+    "url": "http://localhost:4000//KLIS",
+    "image": "/assets/images/cover1.jpg",
+    "description": "나의 코딩 이야기"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="Finding The Way Developer" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-fables " role="presentation"><a href="/tag/projects">Projects</a></li>
+        <li class="nav-speeches " role="presentation"><a href="/tag/algorithm">Algorithm</a></li>
+        <li class="nav-fiction " role="presentation"><a href="/tag/etc">ETC</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="/"><img src="/assets/images/ghost.png" alt="Blog Logo" /></a>
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-windows">
+
+        <header class="post-header">
+            <h2 class="post-title">[종만북]9.동적 계획법 테크닉-K번째 증가 수열</h2>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/aka2344'>Donghoon Kang</a>
+                
+            
+            <time class="post-date" datetime="2021-02-04">04 Feb 2021</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/algorithm'>Algorithm</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <h4 id="문제">문제</h4>
+
+<p>출처 : https://www.algospot.com/judge/problem/read/KILS</p>
+
+<p>어떤 정수 수열에서 0개 이상의 숫자를 지우면 이 수열의 부분 수열 (subsequence) 를 얻을 수 있다. 예를 들어 <code class="highlighter-rouge">10 7 4 9</code> 의 부분 수열에는 <code class="highlighter-rouge">7 4 9</code>, <code class="highlighter-rouge">10 4</code>, <code class="highlighter-rouge">10 9</code> 등이 있다. 단, <code class="highlighter-rouge">10 4 7</code> 은 원래 수열의 순서와 다르므로 <code class="highlighter-rouge">10 7 4 9</code> 의 부분 수열이 아니다.</p>
+
+<p>어떤 부분 수열이 _단조 증가_할 때 이 부분 수열을 증가 부분 수열 (increasing subsequence) 라고 하며, 이 중 가장 긴 것을 최대 증가 부분 수열 (LIS, longest increasing subsequence) 라고 한다. 예를 들어, <code class="highlighter-rouge">5 20 21 22 8 9 10</code> 의 최대 증가 부분 수열은 <code class="highlighter-rouge">5 8 9 10</code> 이다.</p>
+
+<p>어떤 수열에는 LIS 가 두 개 이상 있을 수 있다. 예를 들어, <code class="highlighter-rouge">4 5 6 1 2 3</code> 의 LIS 는 두 개가 있다.</p>
+
+<p><em>모든 숫자가 서로 다른 (중복 숫자가 없는)</em> 수열이 주어질 때, 이 수열의 LIS 중 사전 순서대로 맨 앞에서 k번째 있는 LIS 를 출력하는 프로그램을 작성하시오.</p>
+
+<h4 id="입력">입력</h4>
+
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (&lt;= 50) 가 주어진다. 각 테스트 케이스의 첫 줄에는 수열에 포함된 원소의 수 N (&lt;= 500) 과 K 가 주어진다. K 는 32비트 부호 있는 정수에 저장할 수 있다. 그 다음 줄에 N개의 정수로 수열이 주어진다. 각 정수는 1 이상 100,000 이하이며, 같은 수는 두 번 등장하지 않는다.</p>
+
+<p>주어진 수열의 LIS 는 최소 K 개 있다고 가정해도 좋다.</p>
+
+<h4 id="출력">출력</h4>
+
+<p>각 테스트케이스마다 두 줄을 출력한다. 첫 줄에는 LIS 의 길이 L 을 출력하고, 그 다음 줄에 L 개의 정수로 K번째 LIS 를 출력한다.</p>
+
+<h3 id="풀이책-참고">풀이(책 참고)</h3>
+
+<p>먼저 기존에 풀었던 LIS를 구하는 메소드는 다음과 같다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kt">int</span> <span class="nf">LIS</span><span class="o">(</span><span class="kt">int</span> <span class="n">start</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">cache</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+		<span class="n">ret</span> <span class="o">=</span> <span class="n">cache</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">next</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">next</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">next</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">start</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">A</span><span class="o">[</span><span class="n">start</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">[</span><span class="n">next</span><span class="o">])</span> <span class="o">{</span>
+				<span class="n">ret</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">ret</span><span class="o">,</span> <span class="n">LIS</span><span class="o">(</span><span class="n">next</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+				<span class="n">cache</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">ret</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>K번째 문제를 풀기 위해 일정 답을 건너뛰어야 하는데, 여기서는 정렬된 LIS들 중 일정 개수만큼 건너뛰는 원리로 구현하여야 하므로, 각 LIS의 길이를 알아야 한다. 즉, 시작 인덱스가 start에서 시작하는 LIS의 수를 찾는 메서드를 구현한다. start 인덱스 다음부터 LIS들을 찾아 길이를 계산할 때, 다음 인덱스 이후가 현재 인덱스와 LIS로 이어질 조건은 위 LIS를 찾는 조건과같이 A[start]&lt;A[next]이며, LIS(start)와 LIS(next)+1이 같아야 한다. 즉, 다음 인덱스의 배열값이 크다는 전제하에 다음 인덱스의 LIS길이가 현재 LIS길이보다 1보다 작다는 것은 두 인덱스가 이어져 LIS를 형성한다는 것을 의미하므로, 이때의 개수를 누적할 수 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A[start]에서 시작하는 LIS의 수</span>
+	<span class="kd">static</span> <span class="kt">double</span> <span class="nf">count</span><span class="o">(</span><span class="kt">int</span> <span class="n">start</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">LIS</span><span class="o">(</span><span class="n">start</span><span class="o">)</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
+			<span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">cache2</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+			<span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+		<span class="n">ret</span> <span class="o">=</span> <span class="n">cache2</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">next</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">next</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">next</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">((</span><span class="n">start</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">A</span><span class="o">[</span><span class="n">start</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">[</span><span class="n">next</span><span class="o">])</span> <span class="o">&amp;&amp;</span> <span class="n">LIS</span><span class="o">(</span><span class="n">start</span><span class="o">)</span> <span class="o">==</span> <span class="n">LIS</span><span class="o">(</span><span class="n">next</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">ret</span> <span class="o">=</span> <span class="n">cache2</span><span class="o">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">MAX</span><span class="o">,</span> <span class="n">ret</span> <span class="o">+</span> <span class="n">count</span><span class="o">(</span><span class="n">next</span><span class="o">));</span>
+                <span class="c1">// 오버플로를 막기 위해 20억이상의 수는 20억으로 처리</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>LIS 메서드와 유사하게 메모이제이션을 적용하였고, 기저 사례로 현재 인덱스로부터 시작하는 LIS의 길이가 1인 경우를 1로 리턴하도록 설정하였다. 이후 반복문은 위의 조건을 만족시키는 다음 인덱스를 찾아 해당 값을 재귀호출하여 누적시키도록 하였다. 따라서 start에서 시작하는 LIS의 수를 찾아 리턴할 수 있다.</p>
+
+<p>이를 통해 건너뛰는 과정을 구현할 수 있는데, 먼저 건너뛰어야할 수 skip을 k-1로 정의한다. 그리고 특정 인덱스 start에서 시작하여 skip개를 건너뛴 수열을 찾는다고 할 때, 위의 개수를 셀따와 마찬가지로 start 이후 인덱스들 중 A[start]&lt;A[next]와 LIS(start)==LIS(next)+1을 만족시키는 인덱스가 다음 LIS 성분 후보일 수 있다. 여기서, 이 LIS 후보들 중 건너뛸 개수만큼 뺄때 중요한 것은 해당 A[next] 값들이 오름차순으로 정렬하여야 비교할 수 있다는 것이다. 예를 들어, 현재 배열값이 1이고 위 조건을 만족시키는 다음 LIS 후보들의 배열값이 4, 2, 5, 7이라 할 때, 각각의 이어진 LIS들은 (1,4…), (1,2…),(1,5…),(1,7…)으로 형성될 것이다. 따라서 먼저 이러한 배열값들을 정렬시켜야 건너뛰는 단계로 넘어갈 수 있기 때문에 후보들을 모아 저장하고, 이를 정렬시켜야 한다.</p>
+
+<p>정렬이 완료됬으면, 이후 배열값들을 크기순으로 돌며 위에서 정의한 count 메서드를 통해 각 인덱스의 LIS 개수를 카운팅한다. 이 때, 카운팅된 값이 skip값보다 작거나 같은 경우 k번째 lis는 해당 인덱스 이후 범위에 존재한다는 것을 의미하므로 skip값에서 해당 카운팅한값만큼 건너뛸수 있음을 의미하므로, 값을 빼고, 만약 카운팅한 값이 큰경우는 해당 인덱스로 시작하는 LIS가 k번째 LIS에 속한다는 것을 의미하므로 해당 인덱스를 다음 인덱스값으로 삼아서 재귀호출을 통해 수열값을 찾아나가면 된다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A[start]에서 시작하는 LIS중 사전순으로 skip개 건너뛴 수열을 lis에 저장함</span>
+<span class="c1">// pair-&gt; 클래스로 구현, PiarComparator-&gt;Comparator 구현을 통한 Collections.sort 수행</span>
+<span class="kd">static</span> <span class="kt">void</span> <span class="nf">reconstruct</span><span class="o">(</span><span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">skip</span><span class="o">,</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">lis</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">start</span><span class="o">!=-</span><span class="mi">1</span><span class="o">)</span>
+			<span class="n">lis</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">A</span><span class="o">[</span><span class="n">start</span><span class="o">]);</span>
+		<span class="n">Vector</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">followers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;();</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">next</span><span class="o">=</span><span class="n">start</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span><span class="n">next</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">next</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">((</span><span class="n">start</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">A</span><span class="o">[</span><span class="n">start</span><span class="o">]&lt;</span><span class="n">A</span><span class="o">[</span><span class="n">next</span><span class="o">])&amp;&amp;</span><span class="n">LIS</span><span class="o">(</span><span class="n">start</span><span class="o">)==</span><span class="n">LIS</span><span class="o">(</span><span class="n">next</span><span class="o">)+</span><span class="mi">1</span><span class="o">)</span>
+				<span class="n">followers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Pair</span><span class="o">(</span><span class="n">A</span><span class="o">[</span><span class="n">next</span><span class="o">],</span><span class="n">next</span><span class="o">));</span>
+		<span class="o">}</span>
+		<span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">followers</span><span class="o">,</span><span class="k">new</span> <span class="n">PairComparator</span><span class="o">());</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">followers</span><span class="o">.</span><span class="na">size</span><span class="o">();</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">followers</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">value</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">count</span><span class="o">(</span><span class="n">idx</span><span class="o">);</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">cnt</span><span class="o">&lt;=</span><span class="n">skip</span><span class="o">)</span>
+				<span class="n">skip</span><span class="o">-=</span><span class="n">cnt</span><span class="o">;</span>
+			<span class="k">else</span> <span class="o">{</span>
+				<span class="n">reconstruct</span><span class="o">(</span><span class="n">idx</span><span class="o">,</span> <span class="n">skip</span><span class="o">,</span> <span class="n">lis</span><span class="o">);</span>
+				<span class="k">break</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>매개변수에 Vector 클래스로 int값을 저장하는 lis가 있는데, 이는 재귀호출에 따라 찾은 k번째 LIS의 각각 요소값들을 저장하기 위한 클래스이다. 또한, 앞서 설명한 바와 같이 다음 LIS후보들을 정렬하여야 하므로, LIS후보를 만족하는 배열값과 이때의 인덱스를 Pair 클래스에 저장하여 Vector에 모으도록 하며(Pair 클래스는 별도 구현), 이렇게 후보를 만족하는 Pair들을 정렬시켜 순서대로 count메소드를 호출하여 건너뛰도록 구현하였다.</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/aka2344" style="background-image: url(/assets/images/casper.png)"><span class="hidden">aka2344's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/aka2344">Donghoon Kang</a></h4>
+
+                        
+                            <p> 백엔드 개발자를 꿈꾸는 개발장비니다.</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Seoul, Korea</span>
+                            <span class="author-link icon-link"><a href="http://aka2344.github.io/"> aka2344.github.io</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=[종만북]9.동적 계획법 테크닉-K번째 증가 수열&amp;url=http://localhost:4000KLIS"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000KLIS"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                        <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:4000KLIS"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="hidden">Google+</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'aka2344'; // required: replace example with your forum shortname
+        var disqus_identifier = '/KLIS';
+        var disqus_url = 'http://localhost:4000/KLIS';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story no-cover" href="/DRAGON">
+            <section class="post">
+                <h2>[종만북]9.동적 계획법 테크닉-드래곤 커브</h2>
+                <p>#### 문제 출처 : https://www.algospot.com/judge/problem/read/DRAGON 드래곤 커브(Dragon curve)는 간단한 수학 규칙으로 그릴 수 있는 그림으로,...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev no-cover" href="/MORSE">
+            <section class="post">
+                <h2>[종만북]9.동적 계획법 테크닉-모스 부호 사전</h2>
+                <p>문제 출처 : https://www.algospot.com/judge/problem/read/MORSE 모스 부호(Morse code)는 전화가 없던 시절 무선 전신에 주로 사용하던 코드로,...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <section class="copyright"><a href="/">Finding The Way Developer</a> &copy; 2021</section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-69281367-1', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

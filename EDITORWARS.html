@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>[종만북]25.상호 베타적 집합-에디터 전쟁</title>
+    <meta name="description" content="나의 코딩 이야기" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="http://localhost:4000//EDITORWARS" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="Finding The Way Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[종만북]25.상호 베타적 집합-에디터 전쟁" />
+    <meta property="og:description" content="나의 코딩 이야기" />
+    <meta property="og:url" content="http://localhost:4000//EDITORWARS" />
+    <meta property="og:image" content="/assets/images/cover1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[종만북]25.상호 베타적 집합-에디터 전쟁" />
+    <meta name="twitter:description" content="나의 코딩 이야기" />
+    <meta name="twitter:url" content="http://localhost:4000//EDITORWARS" />
+    <meta name="twitter:image:src" content="/assets/images/cover1.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "Finding The Way Developer",
+    "name": "[종만북]25.상호 베타적 집합-에디터 전쟁",
+    "url": "http://localhost:4000//EDITORWARS",
+    "image": "/assets/images/cover1.jpg",
+    "description": "나의 코딩 이야기"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="Finding The Way Developer" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-fables " role="presentation"><a href="/tag/projects">Projects</a></li>
+        <li class="nav-speeches " role="presentation"><a href="/tag/algorithm">Algorithm</a></li>
+        <li class="nav-fiction " role="presentation"><a href="/tag/etc">ETC</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="/"><img src="/assets/images/ghost.png" alt="Blog Logo" /></a>
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-windows">
+
+        <header class="post-header">
+            <h2 class="post-title">[종만북]25.상호 베타적 집합-에디터 전쟁</h2>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/aka2344'>Donghoon Kang</a>
+                
+            
+            <time class="post-date" datetime="2021-02-18">18 Feb 2021</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/algorithm'>Algorithm</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <h4 id="문제">문제</h4>
+
+<p>출처 : https://www.algospot.com/judge/problem/read/EDITORWARS</p>
+
+<p>에디터 전쟁은 가장 유명한 자유 소프트웨어 텍스트 편집기인 vi와 Emacs 중 어느 쪽이 더 우월한가를 놓고 인터넷에서 자주 벌어지는 논쟁을 말합니다. 이 논쟁에 참여하는 사람들은 서로 자신이 사용하는 편집기의 장점을 찬양하고 (“vi는 동작도 빠르고, 빠른 편집을 가능하게 한다고”, “Emacs는 LISP을 통해 확장 가능하다고”) 다른 편집기를 헐뜯곤 (“vi-vi-vi는 666이잖아! vi는 악마의 편집기야”, “Emacs는 좋은 운영 체제지. 좋은 편집기가 없는 것만 빼면 완벽해”) 합니다.</p>
+
+<p>모든 회원들이 vi 혹은 Emacs를 사용하는 프로그래밍 동호회에서 연말 파티를 개최하려 합니다. 서로 다른 편집기를 사용하는 사람들이 파티에 함께 참가하면 싸움이 나기 때문에 vi를 사용하는 사람들만 오는 파티, Emacs를 사용하는 사람들만 오는 파티를 따로 하기로 했습니다. 이를 위해 지금까지 모든 회원들이 쓴 댓글을 모아 이들을 두 종류로 분류했습니다.</p>
+
+<ol>
+  <li>상호 인정: 이 유형의 댓글은 댓글을 쓴 사람과 원글을 쓴 사람이 같은 편집기를 쓴다는 사실을 의미합니다. 예로 “아이고 이런 편집기를 쓰시다니 뭘 아는 분이네” 혹은 “역시 편집기는 xxx가 짱이죠” 등이 있겠지요.</li>
+  <li>상호 비방: 이 유형의 댓글은 댓글을 쓴 사람과 원글을 쓴 사람이 다른 편집기를 쓴다는 사실을 의미합니다. 예로 “그런 편집기 쓰면 손가락에 마비가 올 것 같네요” 혹은 “훠어이 악마의 편집기는 물러가라” 등이 있겠지요.</li>
+</ol>
+
+<p>이것만으로는 물론 각 사용자가 어떤 편집기를 쓰는지는 알 수 없지만, 우선 서둘러 장소를 예약해야 하기 때문에 이 정보만으로 파티에 올 수 있는 최대 인원을 알아야 합니다. 댓글 정보가 주어질 때 이 댓글 정보 중 모순되는 것은 없는지 확인하고, 모순되는 것이 없을 때 한 파티의 가능한 최대 인원을 계산하는 프로그램을 작성하세요.</p>
+
+<h4 id="입력">입력</h4>
+
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1≤C≤50)가 주어집니다. 각 테스트 케이스의 첫 줄에는 회원의 수 N (1≤N≤10000)과 분석한 댓글의 개수 M (1≤M≤100000)이 주어집니다. 각 회원은 0에서 N - 1 범위의 숫자로 표현됩니다.</p>
+
+<p>그 후 M줄에 하나씩 각 댓글의 정보가 주어집니다. 각 댓글은 상호 인정, 혹은 상호 비방 댓글입니다. 상호 인정 댓글은 “ACK a b”(0≤a, b&lt;N) 형태로 주어지며 상호 비방 댓글은 “DIS a b” 형태로 주어집니다.</p>
+
+<h4 id="출력">출력</h4>
+
+<p>각 테스트 케이스마다 한 줄을 출력합니다.</p>
+
+<ul>
+  <li>
+    <p>ᆞ댓글에 주어진 정보 중 모순이 없는 경우 한 파티에 올 수 있는 사람의 최대 수를 “MAX PARTY SIZE IS x”의 형태로 출력합니다.</p>
+  </li>
+  <li>
+    <p>ᆞ댓글들에 주어진 정보 중 모순이 있는 경우, 모순이 처음으로 발생하는 댓글이 몇 번인지를 “CONTRADICTION AT i” 형태로 출력합니다. 댓글의 번호는 입력에 주어진 순서대로 1부터 시작한다고 합시다.</p>
+  </li>
+</ul>
+
+<h3 id="풀이책-참고">풀이(책 참고)</h3>
+
+<p>본 문제는 상호 배타적 집합을 표현하는 유니온-파인드 자료구조를 사용하여 해결하는 문제이다. 상호 배타적 집합은 전체 집합 중 성격이 같은 여러 개의 부분집합으로 쪼개진 자료구조를 의미한다. 각 부분집합은 공통원소가 없는 상호 배타적인 성격을 가진다. 이러한 상호 배타적 집합을 구현하기 위해 다음과 같은 3가지 연산이 필요하다.</p>
+
+<ul>
+  <li>초기화 : n개의 원소가 각각의 집합에 포함되어 있도록 초기화한다.</li>
+  <li>합치기(union) 연산 : 두 원소 a, b가 주어질 때 이들이 속한 두 집합을 하나로 합친다.</li>
+  <li>찾기(find) 연산 : 어떤 원소 a가 주어질 때 이 원소가 속한 집합을 반환한다.</li>
+</ul>
+
+<p>이를 구현한 기본적인 형태의 클래스는 다음과 같다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OptimizedDisjointSet</span> <span class="o">{</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">parent</span><span class="o">;</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">rank</span><span class="o">;</span>
+
+	<span class="n">OptimizedDisjointSet</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">parent</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+		<span class="n">rank</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kt">int</span> <span class="nf">find</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">])</span>
+			<span class="k">return</span> <span class="n">u</span><span class="o">;</span>
+		<span class="k">return</span> <span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]);</span>
+	<span class="o">}</span>
+
+	<span class="kt">void</span> <span class="nf">merge</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">,</span> <span class="kt">int</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">u</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">u</span><span class="o">);</span>
+		<span class="n">v</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">v</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">v</span><span class="o">)</span>
+			<span class="k">return</span> <span class="n">u</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">rank</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">])</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">u</span><span class="o">;</span>
+			<span class="n">u</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+			<span class="n">v</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">rank</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">==</span> <span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">])</span>
+			<span class="o">++</span><span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">];</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>한 집합에 속하는 원소들을 하나의 트리로 묶어서 표현하는데, 공통 조상인 루트 노드를 기반으로 트리가 형성된다. 이 때, 두 원소가 같은 트리에 속해 있는지를 확인하는 방법은 각 원소가 포함된 트리의 루트를 찾아 비교하는 것이다. 따라서 이를 위해 각 노드의 부모 노드를 저장할 배열 parent가 존재한다. 노드의 초기화는 각 노드가 기본적으로 자기 자신으로 가르키도록 설정한다. 노드의 루트를 찾는 find 연산을 수행하면 해당 노드의 부모 노드를 따라 자기 자신을 가르키는 루트 노드에 도달할 때까지 재귀 호출되는데, 보다 효율적으로 찾기 위해 노드의 루트를 찾아 parent 배열에 저장하도록 한다. 이 과정에서, 재귀적으로 해당 루트 노드로 따라 올라갈때마다 각 노드의 parent 요소값은 루트로 설정되어 다음에 find연산을 수행하여도 곧바로 루트를 출력하도록 구현할 수 있다.</p>
+
+<p>두 집합을 합치는 merge연산은 두 개의 트리 중 하나의 루트 노드의 부모를 다른 루트노드로 설정하는 방식으로 합치게 되는데, 합쳐진 결과가 고르게 퍼진 트리를 유지하기 위해서 각 트리의 높이를 계산해 높이가 낮은 트리를 높은 트리 밑에 추가하도록 함으로써 구현할 수 있다.</p>
+
+<p>문제를 해결하기 위해 위의 구조를 확장하여 구현해야 하는데, 각 트리의 크기를 구해야 하므로 트리의 크기가 저장되는 size배열을 추가하고, 상호 비방의 경우 배타적 집합으로 설정해야 하므로 이를 저장할 enemy 배열을 추가한다. 그리고 입력값으로 주어진 상호 인정, 상호 비방에 따른 연산을 수행할 메서드를 각각 구현한다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OptimizedDisjointSet</span> <span class="o">{</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">parent</span><span class="o">;</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">rank</span><span class="o">;</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">size</span><span class="o">;</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">enemy</span><span class="o">;</span>
+
+	<span class="n">OptimizedDisjointSet</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">parent</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+		<span class="n">rank</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="n">size</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+		<span class="n">enemy</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+		<span class="n">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">size</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+		<span class="n">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">enemy</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kt">int</span> <span class="nf">find</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">])</span>
+			<span class="k">return</span> <span class="n">u</span><span class="o">;</span>
+		<span class="k">return</span> <span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]);</span>
+	<span class="o">}</span>
+
+	<span class="kt">int</span> <span class="nf">merge</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">,</span> <span class="kt">int</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">v</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+			<span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">v</span><span class="o">);</span>
+		<span class="n">u</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">u</span><span class="o">);</span>
+		<span class="n">v</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">v</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">v</span><span class="o">)</span>
+			<span class="k">return</span> <span class="n">u</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">rank</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">])</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">u</span><span class="o">;</span>
+			<span class="n">u</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+			<span class="n">v</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="n">parent</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+		<span class="n">size</span><span class="o">[</span><span class="n">v</span><span class="o">]</span> <span class="o">+=</span> <span class="n">size</span><span class="o">[</span><span class="n">u</span><span class="o">];</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">rank</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">==</span> <span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">])</span>
+			<span class="o">++</span><span class="n">rank</span><span class="o">[</span><span class="n">v</span><span class="o">];</span>
+		<span class="k">return</span> <span class="n">v</span><span class="o">;</span>
+
+	<span class="o">}</span>
+
+	<span class="kt">boolean</span> <span class="nf">dis</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">,</span> <span class="kt">int</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">u</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">u</span><span class="o">);</span>
+		<span class="n">v</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">v</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">v</span><span class="o">)</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">enemy</span><span class="o">[</span><span class="n">v</span><span class="o">]);</span>
+		<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">enemy</span><span class="o">[</span><span class="n">u</span><span class="o">]);</span>
+		<span class="n">enemy</span><span class="o">[</span><span class="n">a</span><span class="o">]</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+		<span class="n">enemy</span><span class="o">[</span><span class="n">b</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kt">boolean</span> <span class="nf">ack</span><span class="o">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">,</span> <span class="kt">int</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">u</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">u</span><span class="o">);</span>
+		<span class="n">v</span> <span class="o">=</span> <span class="n">find</span><span class="o">(</span><span class="n">v</span><span class="o">);</span>
+        <span class="c1">// 두 집합이 적대 관계일 때 모순</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">enemy</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">==</span> <span class="n">v</span><span class="o">)</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">v</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">enemy</span><span class="o">[</span><span class="n">u</span><span class="o">],</span> <span class="n">enemy</span><span class="o">[</span><span class="n">v</span><span class="o">]);</span>
+		<span class="n">enemy</span><span class="o">[</span><span class="n">a</span><span class="o">]</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">b</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+			<span class="n">enemy</span><span class="o">[</span><span class="n">b</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>초기화 단계에서 기본 사이즈는 1로, enemy는 없는 경우에 해당하는 -1로 각 배열을 초기화한다. merge연산의 리턴 타입은 int형으로 합쳐졌을 때 상위 루트에 해당하는 번호를 리턴하도록 한다. dis연산과 ack 연산을 구현하는데, 책에서 정의한 핵심 원칙은 다음과 같다.</p>
+
+<ul>
+  <li>동지의 적은 나의 적이다 : 나와 상대가 같은 편집기를 쓸 때, 상대와 다른 편집기를 쓰는 사람은 나와 다른 편집기를 쓴다.</li>
+  <li>적의 적은 나의 동지다 : 나와 상대가 다른 편집기를 쓸 때, 상대와 다른 편집기를 쓰는 사람은 나와 같은 편집기를 쓴다.</li>
+</ul>
+
+<p>위 두가지 성질을 이용하면, ack연산과 dis연산에서 이를 활용하여 enemy배열을 통해 적대 관계와 merge연산을 통해 합치기 연산이 가능하며, 모순이 발생한 경우를 체크할 수있다. ack 연산의 경우 두 루트노드를 합치고, 두 루트의 적대 노드를 합쳐 생성된 두 트리에 대해 서로간의 적대 관계를 설정하여 “동지의 적은 나의 적” 원칙을 활용하였다. dis연산의 경우 각 노드와 상대 노드의 적대 노드를 합쳐 생성된 두 트리의 적대 관계를 설정하여 “적의 적은 나의 동지” 원칙을 활용하였다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kt">int</span> <span class="nf">maxParty</span><span class="o">(</span><span class="n">OptimizedDisjointSet</span> <span class="n">set</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">node</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">node</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">node</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">parent</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">==</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+				<span class="kt">int</span> <span class="n">enemy</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="na">enemy</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">enemy</span> <span class="o">&gt;</span> <span class="n">node</span><span class="o">)</span>
+					<span class="k">continue</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">mySize</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+				<span class="kt">int</span> <span class="n">enemySize</span> <span class="o">=</span> <span class="o">(</span><span class="n">enemy</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">[</span><span class="n">enemy</span><span class="o">]);</span>
+				<span class="n">ret</span> <span class="o">+=</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">mySize</span><span class="o">,</span> <span class="n">enemySize</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>입력값에 따라 ack연산과 dis 연산이 수행되며, 완료되었을 때 최종적으로 위에서 구현한 상호 배타적 집합을 활용해 최대 집합의 크기를 계산하는 메소드 maxParty를 구현한다. 모든 사람에 대해 반복문을 돌며 부모 노드가 자기 자신을 가르키는 루트 노드를 찾아 크기를 계산하는데, 같은 모임 쌍을 두번 세지 않기 위해 적대 관계의 노드 번호가 노드 번호보다 작은 경우만을 세도록 한다. 해당 트리의 크기와, 적대 노드의 트리 크기를 계산하여 최댓값을 계산하고, 이를 누적하여 가장 큰 집합의 크기를 계산하였다.</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/aka2344" style="background-image: url(/assets/images/casper.png)"><span class="hidden">aka2344's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/aka2344">Donghoon Kang</a></h4>
+
+                        
+                            <p> 백엔드 개발자를 꿈꾸는 개발장비니다.</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Seoul, Korea</span>
+                            <span class="author-link icon-link"><a href="http://aka2344.github.io/"> aka2344.github.io</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=[종만북]25.상호 베타적 집합-에디터 전쟁&amp;url=http://localhost:4000EDITORWARS"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000EDITORWARS"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                        <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:4000EDITORWARS"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="hidden">Google+</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'aka2344'; // required: replace example with your forum shortname
+        var disqus_identifier = '/EDITORWARS';
+        var disqus_url = 'http://localhost:4000/EDITORWARS';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story no-cover" href="/MEASURETIME">
+            <section class="post">
+                <h2>[종만북]24.구간 트리-삽입 정렬 시간 재기</h2>
+                <p>#### 문제 출처 : https://www.algospot.com/judge/problem/read/MEASURETIME 유명한 정렬 알고리즘인 삽입 정렬은 정렬된 부분 배열을 유지하며 이...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev no-cover" href="/RUNNINGMEDIAN">
+            <section class="post">
+                <h2>[종만북]23.우선순위 큐와 힙-변화하는 중간값</h2>
+                <p>문제 출처 : https://www.algospot.com/judge/problem/read/RUNNINGMEDIAN 한 수열의 중간값(median)은 이 수열을 정렬했을 때 가운데 오는 값입니다. 예를...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <section class="copyright"><a href="/">Finding The Way Developer</a> &copy; 2021</section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-69281367-1', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>
