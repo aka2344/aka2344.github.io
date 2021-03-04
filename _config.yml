@@ -17,7 +17,7 @@ disqus: aka2344
 baseurl: /
 
 # Permalinks
-permalink: /title
+permalink: /:title
 # permalink: /author/:username
 # permalink: /tag/:tag
 
@@ -46,7 +46,7 @@ plugins: [jekyll-paginate]
 safe: false
 lsi: false
 username: aka2344
-repo: jasper
+repo: aka2344.github.io
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
