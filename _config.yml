@@ -7,8 +7,8 @@ paginate: 5
 language: 'en-uk'
 
 # Website info
-name: 'Finding The Way Home'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+name: 'Finding The Way Developer'
+description: "나의 코딩 이야기"
 
 short_url: 'aka2344.github.io'
 google_analytics: UA-69281367-1
