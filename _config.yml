@@ -12,7 +12,8 @@ description: "나의 코딩 이야기"
 
 short_url: 'aka2344.github.io'
 google_analytics: UA-69281367-1
-disqus: aka2344
+disqus: https-aka2344-github-io
+comments: true
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
 
