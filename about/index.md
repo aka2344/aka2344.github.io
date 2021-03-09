@@ -1,13 +1,15 @@
 ---
 layout: page
-title: About
+title: About me
 navigation: true
 logo: 'assets/images/ghost.png'
 current: about
 ---
 
-This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
-
-We use this for testing and for reference!
-
-If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
+## Profile
+<img align="left" src="..\assets\Me.jpg" alt="Me" width="200" height="300" >
+이름 : 강동훈
+생년월일 : 1996.09.13
+학력 : 화성고등학교 졸업(2012.03 ~ 2015.02)
+서울시립대학교 공간정보공학과 졸업 예정(2015.03~2021.07)
+거주지 : 서울시 동대문구 휘경동

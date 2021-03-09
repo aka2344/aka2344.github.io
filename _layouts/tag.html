@@ -8,14 +8,13 @@ current: tag
 ---
 
 <!-- dynamically overriding backgrounds for tags as well as descriptions -->
-<!--{% if page.url contains 'fables' %}
-   {% assign tag_description='A series of short stories that make you think.' %}
-{% elsif page.url contains 'speeches' %}
-    {% assign new_cover='assets/images/cover7.jpg' %}
-    {% assign tag_description='Some of the greatest words ever spoken.' %}
-{% elsif page.url contains 'fiction' %}
-    {% assign new_cover='assets/images/cover1.jpg' %}
-{% endif %} -->
+{% if page.url contains 'projects' %}
+   {% assign tag_description='프로젝트, 공모전 활동 내용입니다.' %}
+   {% assign new_cover='assets/images/cover_project.jpg' %}
+{% elsif page.url contains 'algorithm' %}
+    {% assign new_cover='assets/images/cover_coding.jpg' %}
+    {% assign tag_description='알고리즘 공부 포스트입니다.' %}
+{% endif %} 
 
 <!-- default -->
 <!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
@@ -30,7 +29,7 @@ current: tag
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{ page.tag | capitalize }}</h1>
+            <h1 class="page-title" >{{ page.tag | capitalize }}</h1>
             <h2 class="page-description">
             {% if tag_description %}
                 {{ tag_description }}
