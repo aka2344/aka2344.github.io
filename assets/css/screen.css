@@ -1187,6 +1187,14 @@ body.page-template .post-title {
     transform: translateX(-50%);
 }
 
+#me {
+	display: inline;
+	left : 15%;
+    width: 30%;
+	height: 30%;
+    margin-right: 2%;
+}
+
 .footnotes {
     font-style: italic;
     font-size: 1.3rem;
