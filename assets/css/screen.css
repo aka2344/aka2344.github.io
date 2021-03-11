@@ -995,7 +995,7 @@ body.nav-opened .nav {
 .post {
     position: relative;
     width: 80%;
-    max-width: 900px;
+    max-width: 710px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -1187,13 +1187,21 @@ body.page-template .post-title {
     transform: translateX(-50%);
 }
 
+/* custom css */
+
 #me {
 	display: inline;
-	left : 15%;
-    width: 30%;
-	height: 30%;
+	left : 10%;
+    width: 25%;
+	height: 25%;
     margin-right: 2%;
 }
+
+#stack{
+	width:90%;
+	height:90%;
+}
+
 
 .footnotes {
     font-style: italic;
