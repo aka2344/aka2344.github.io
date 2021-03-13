@@ -25,7 +25,7 @@ current: about
 
 ### Stacks
 
-<img id="stack" src="..\assets\stacks.jpg" alt="Me">
+<img id="stack" src="..\assets\Stacks.JPG" alt="Me">
 
 ### Projects
 
