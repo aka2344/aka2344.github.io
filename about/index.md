@@ -23,6 +23,16 @@ current: about
 
 
 
+
+
+
+
+
+
+
+
+
+
 ### Stacks
 
 <img id="stack" src="..\assets\Stacks.JPG" alt="Me">
