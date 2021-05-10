@@ -164,15 +164,15 @@
 
 <p>이를 실행하여 osm 데이터를 변환하면, PostgreSQL 데이터베이스에는 도로에 대한 노드, 엣지 데이터가 추출되어 아래와 같이 저장된다.</p>
 
-<p><img src="../assets/ways.PNG" alt="ways" /></p>
+<p><img src="../assets/ways.jpg" alt="ways" /></p>
 
-<p><img src="../assets/node.PNG" alt="node" /></p>
+<p><img src="../assets/node.jpg" alt="node" /></p>
 
 <p>첫번째 사진은 ways 테이블로 각 도로들에 대한 주소, 좌표, 이름, 노드, 길이,  비용 등이 저장되어 있다. 두번째 사진은 ways_vertices_pgr 테이블로 각각의 노드들에 대한 주소와 좌표가 저장되어 있다.</p>
 
 <p>이렇게 구축된 노드-링크 형태의 데이터를 gis tool(QGIS)를 통해 지도상에 표현하면 다음과 같이 나타난다.</p>
 
-<p><img src="/assets/nodeedge.PNG" alt="노드엣지" /></p>
+<p><img src="../assets/nodeedge.jpg" alt="노드엣지" /></p>
 
 <p>따라서 이렇게 구축된 데이터를 통해 경로 분석이 가능한데, 특히 ways 테이블에 저장된 비용(cost) 항목을 통해 최단경로를 계산하는 알고리즘을 사용할 수 있다. 이는, 각 도로의 길이에 비례한 항목으로 도로가 길면 높은 비용을, 도로가 짧으면 낮은 비용이 저장되며 이를 통해 그래프 알고리즘에서 최단경로 계산에 사용되는 항목이 된다.</p>
 
