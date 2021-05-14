@@ -276,7 +276,7 @@
 
 <p>이 또한 앞서 기자재 위치조회에서 구현한 방식과 마찬가지로 재물조사가 진행되지 않은 방의 roomID 목록을 전달받아서 <code class="highlighter-rouge">querySourceFeatures</code>를 통해 해당 방들을 검색하여 층별 결과 collection에 저장하는 형태로 구현하였다. 따라서 지도에는 재몰조사가 완료되지 않은 방들이 앞서 저장한 collection으로 출력되며 각 층별 collection은 사용자가 표시하고자 하는 층을 클릭할 때 해당 층의 collection이 출력된다.</p>
 
-<p><img src="/assets/surveymap.jpg" style="zoom:30%;" /></p>
+<p><img src="../assets/surveymap.jpg" style="zoom:30%;" /></p>
 
 <p>위 화면은 기자재 재물조사 작업 목록 중 현재 진행중인 재물조사 작업을 클릭하였을 때 해당작업에서 재물조사 현황에 대한 지도를 출력하는 액티비티로 건물의 각 층별로 기자재 재물조사가 완료되지 않은 방들이 붉은색으로 표시된 것을 확인할 수 있다. 따라서 사용자는 기자재 재물조사 시 어떤 방이 재물조사가 완료되지 않았는지 직관적이고 쉽게 알 수 있으며 이를 통해 편리한 작업이 가능해진다.</p>
 
@@ -651,6 +651,8 @@
 
 <p>이렇게 연동에 필요한 다양한 형태의 메서드를 정의하고 이를 GET, POST 등의 방식으로 호출하여 모바일 환경(안드로이드)에서도 웹 서버의 DB연동 작업이 이루어질 수 있다.</p>
 
+<h3 id="다음-글mapbox-android-sdk"><a href="https://aka2344.github.io/graduproj2">다음 글(Mapbox Android SDK)</a></h3>
+
 	  ]]></description>
 	</item>
 
@@ -927,6 +929,8 @@
 </code></pre></div></div>
 
 <p>위 코드는 스크립트 코드 중 대피소 데이터를 지도에 추가하는 부분인데, 코드에서 확인할 수 있듯이 wms 주소를 입력하여 해당 대피소 데이터를 mapbox 상에서의 layer 형태로 추가하는 것을 볼 수 있다. 따라서 추가된 대피소 데이터들은 마커의 형태로 지도 위에 출력된다.</p>
+
+<h3 id="다음-글"><a href="https://aka2344.github.io/studyproj2">다음 글</a></h3>
 
 	  ]]></description>
 	</item>
